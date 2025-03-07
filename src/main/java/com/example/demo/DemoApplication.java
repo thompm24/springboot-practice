@@ -1,12 +1,9 @@
 package com.example.demo;
 
-import com.example.demo.student.Student;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
-import java.util.List;
-import java.time.LocalDate;
 
 @SpringBootApplication
 @RestController
@@ -17,10 +14,7 @@ public class DemoApplication {
 	}
 
   @GetMapping
-  public List<Student> hello() {
-    return List.of(
-        new Student(1L, "jeffrey", "jeffrey@gmail.com", LocalDate.of(2005, 1, 1), 20),
-        new Student(2L, "geoffrey", "geoffrey@gmail.com", LocalDate.of(2002, 1, 1), 23)
-        );
+  public String hello() {
+    return "Hello world!";
   }
 }
